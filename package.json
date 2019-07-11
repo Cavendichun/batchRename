@@ -10,11 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/Cavendichun/batchRename.git"
   },
-  "bin": "./src/index.js",
+  "bin": {
+    "batchrename": "./src/index.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Cavendichun/batchRename/issues"
   },
-  "homepage": "https://github.com/Cavendichun/batchRename#readme"
+  "homepage": "https://github.com/Cavendichun/batchRename#readme",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "colors": "^1.3.3",
+    "inquirer": "^6.5.0"
+  }
 }
