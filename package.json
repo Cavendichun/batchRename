@@ -1,0 +1,20 @@
+{
+  "name": "batchrename",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cavendichun/batchRename.git"
+  },
+  "bin": "./src/index.js",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cavendichun/batchRename/issues"
+  },
+  "homepage": "https://github.com/Cavendichun/batchRename#readme"
+}
