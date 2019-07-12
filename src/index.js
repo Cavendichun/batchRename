@@ -30,7 +30,7 @@ if (additionalArgs !== '.') {
             },
             {
                 type: 'input',
-                message: 'Please enter a prefix for the filename. If it is empty, the filename is a number.',
+                message: 'Please enter a prefix for the filename, and must include a $ symbol in the name to be replaced by a number.',
                 name: 'prefix',
                 when: function (answers) {
                     return answers.confirmPath === true;
