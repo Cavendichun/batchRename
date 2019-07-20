@@ -53,8 +53,24 @@ if (additionalArgs !== '.') {
 }
 
 function startRename(prefix, currentPath, childFilename) {
-    let errlist = [];
-    childFilename.map((p, i) => {
+    let errlist = [], _childFilename = childFilename.concat();
+    const ts = Date.now(6);
+    //献给所有文件命名随机数，避免重名
+    childFilename.map((p, idx) => {
+        fs.renameSync(
+            path.resolve(currentPath, p),
+            path.resolve(currentPath, ts + p),
+            function (err) {
+                errlist.push(err)
+            }
+        )
+        _childFilename[idx] = ts + p;
+    })
+    if (errlist.length >= 1) {
+        console.log('Rename unsuccess !!!'.red);
+        return false;
+    }
+    _childFilename.map((p, i) => {
         fs.renameSync(
             path.resolve(currentPath, p),
             path.resolve(currentPath, prefix.replace(/\$/g, i) + path.extname(p)),
